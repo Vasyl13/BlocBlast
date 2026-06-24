@@ -8,7 +8,7 @@ namespace BlockBlast
     {
         private const int DefaultSize = 8;
 
-        private readonly IShapeFactory _shapeFactory;
+        private readonly ShapeFactory _shapeFactory;
         private readonly IBestScoreStore _bestScoreStore;
 
         private readonly ShapeSlot[] _slots = new ShapeSlot[3]
@@ -36,7 +36,7 @@ namespace BlockBlast
         public Brush ActiveColor => _activeColor;
         public int ActiveIndex => _activeIndex;
 
-        public BlockBlastGame(IShapeFactory shapeFactory, IBestScoreStore bestScoreStore)
+        public BlockBlastGame(ShapeFactory shapeFactory, IBestScoreStore bestScoreStore)
         {
             _shapeFactory = shapeFactory;
             _bestScoreStore = bestScoreStore;
